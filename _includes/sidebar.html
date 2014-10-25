@@ -18,7 +18,9 @@ styles, `#sidebar-checkbox` for behavior. -->
 	<nav class="sidebar-nav">
 
 		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" 
-			href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"> 
+			href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" 
+			data-pageurl=" {{ page.url }} " 
+			data-baseurl=" {{ site.baseurl }} "> 
 			Home
 		</a>
 
