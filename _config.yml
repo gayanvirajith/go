@@ -1,0 +1,53 @@
+# Go Jekyll theme general configurations
+
+# Base URL
+baseurl: /go # the subpath of your site, e.g. /blog/
+
+# Site live URL
+url: http://localhost:4000 # the base hostname & protocol for your site
+
+# Go theme based configuration. Please change accordingly.
+go:
+  title: Go Theme
+  tag_line: Your blog tag line
+  meta_description: > # this means to ignore newlines until "author:"
+   Write an awesome description for your new site here. You can edit this
+   line in _config.yml. It will appear in your document head meta (for
+   Google search results) and in your feed.xml site description.
+    
+  # Author details
+  author: 
+    name: Gayan Virajith
+    email: gayanvirajith@gmail.com
+    url: http://gayan.me
+
+    # Profile links, leave blank to ignore
+  social: 
+    github: gayanvirajith
+    twitter: gayanvirajith
+    facebook: gayanvirajith
+    gplus: +GayanVirajith
+    dribble: gayan
+    pinterest: 
+
+# Conversion / Build settings 
+markdown:    kramdown
+highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+
+# Permalinks
+permalink:        pretty
+
+# Files/Folders to be excluded from generated _site folder
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed

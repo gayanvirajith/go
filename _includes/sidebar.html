@@ -1,0 +1,54 @@
+<!-- 
+Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+
+	<div class="sidebar-info">
+  		<p>
+	  		Programmer / Web Developer, 
+	  		<a href="http://processwire.com/" target="_blank">@processwire</a> CMS/CMF &amp;
+	  		<a href="http://jekyllrb.com/" target="_blank">@jekyll</a> 
+	  		enthusiast.
+  		</p>
+	</div>
+
+	<nav class="sidebar-nav">
+
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" 
+			href="{{ prepend: site.baseurl | prepend: site.url }}"> 
+			Home
+		</a>
+
+		{% for item in site.data.main-nav %}
+		{% assign item_url = item.href | append:"/" %}
+		{% if item_url == page.url %}
+		{% assign c = "active" %}
+		{% else %}
+		{% assign c = "" %}
+		{% endif %}
+
+		<a class="sidebar-nav-item {{ c }}" 
+			href="{{ item.href | prepend: site.baseurl | prepend: site.url }}">
+			{{ item.title }}
+		</a>
+		{% endfor %}
+
+    	<a class="sidebar-nav-item" 
+    		href="http://github.com/{{ site.go.social.github }}"
+    		target="_blank">
+    		GitHub
+		</a>
+
+	</nav>
+
+	<div class="sidebar-info small">
+	    <p>
+	      Content belongs to author. Design concept is free for study, use, 
+	      reproduce and distribute.
+	    </p>
+	</div>
+
+</div>
