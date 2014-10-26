@@ -30,8 +30,9 @@
  * Wrappers		- Wrapping and constraining elements.
  * 
  * COMPONENTS
- * Main head   - Site header
- * Sidebar		- Sidebar components thanks to Chris Coyier
+ * Main head  - Site header
+ * Sidebar    - Sidebar components thanks to Chris Coyier
+ * Post       - Post/Page item styles
  * 
  */
 
@@ -112,7 +113,6 @@ body {
     family: $font-family-base; // variables inside partials > _variables.scss
   }
   color: $gray-darker;
-  min-height: 1500px;
 }
 
 /* Prevent scroll on narrow devices */
@@ -121,7 +121,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Anchor tag style */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: $color-1;
+}
 
+a:hover {
+  border-bottom-color: $color-1; 
+}
 
 
 /*------------------------------------*\
@@ -212,7 +221,12 @@ body {
   }
 }
 
-.main-head .main-head-title h3 { margin-bottom: 15px; }
+.main-head .main-head-title h3 { 
+  margin-bottom: 15px; 
+  small {
+    padding-left: 10px;
+  }
+}
 
 
 
@@ -443,4 +457,64 @@ body {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-POST
+\*------------------------------------*/
+
+/*
+ * Post/Pages 
+ * Every post article will be wrapped in a container named `.post` and used 
+ * in post layout under _layout folder.
+ * Every page content also wrapped in a container named `.page` and used 
+ * in page layout under _layout folder. 
+ */
+
+.post, .page {
+  margin-bottom: 2em;
+  @include MQ(M) {
+    margin-bottom: 4em;
+  }
+}
+
+/* Article title / Page title */
+.post-title a {
+  color: $color-1;
+  border-bottom-width: 3px;
+}
+
+/* Meta info after post-title */
+.post-meta {
+  color: $gray-light;
+  padding: 1.5em 0 2em 0;
+  letter-spacing: 1px;
+  @include MQ(M) {
+    font-size: 18px;    
+  }
+}
+
+/* Related post articles */
+.related-posts {
+  padding: 1em 0;
+  border-bottom: 1px solid $gray-lighter;
+  @include MQ(M) {
+    padding: 2em 0;
+  }
+}
+
+.related-posts ul {
+  list-style: none;
+}
+
+.related-posts ul li a {
+  &:hover, &:focus {
+    small {
+      color: inherit; 
+    }
+  }
 }
