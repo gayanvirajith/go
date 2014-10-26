@@ -10,6 +10,7 @@ layout: default
   {{ content }}
 </article>
 
+{% if site.related_posts %}
 <div class="related-posts">
   <h2>Related Posts</h2>
   <ul>
@@ -25,4 +26,4 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-
+{% endif %}
