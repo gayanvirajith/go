@@ -49,12 +49,15 @@
         <div class="container">
           <div class="main-head-logo">{% include logo.html %}</div>
           <div class="main-head-title">
-            <h3>{{ site.go.title }}<small>{{ site.go.tag_line }}</small></h3>
+            <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}" 
+              title="{{ site.go.title }}"> 
+              <h3>{{ site.go.title }}<small>{{ site.go.tag_line }}</small></h3>
+            </a>
           </div>
-        </div>
-        <div class="container content">
-        {{ content }}
+        </div>        
       </div>
+      <div class="container content">
+          {{ content }}
       </div>
     </div>
 

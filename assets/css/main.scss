@@ -24,7 +24,8 @@
  * Body resets 	- Body resets, box sizing 
  * 
  * BASE
- * Typography	- Custom typography
+ * Typography - Custom typography
+ * Syntax	- Syntax highlighting
  * 
  * OBJECTS
  * Wrappers		- Wrapping and constraining elements.
@@ -144,6 +145,16 @@ a:hover {
 
 
 /*------------------------------------*\
+    #SETTINGS-SYNTAX
+\*------------------------------------*/
+
+@import "base/syntax-highlighting";
+
+
+
+
+
+/*------------------------------------*\
     #OBJECTS-WRAPPERS
 \*------------------------------------*/
 
@@ -192,7 +203,7 @@ a:hover {
 
 .main-head {
   margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $gray-lighter;
   width: 100%;
   padding: .5em 0;  
   @include MQ(M){
@@ -205,6 +216,12 @@ a:hover {
   padding-right: 10px;
   @include column(1);
   text-align: center;
+}
+
+.main-head .main-head-logo a {
+  &:hover, &:focus {
+    border-bottom-color: transparent;
+  }
 }
 
 .main-head .main-head-title {
@@ -443,8 +460,7 @@ a:hover {
 }
 .wrap,
 .sidebar-toggle {
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-          transition: transform .5s ease-in-out;
+  @include transition(transform .5s ease-in-out)
 }
  
 #sidebar-checkbox:checked + .sidebar {
@@ -517,4 +533,40 @@ a:hover {
       color: inherit; 
     }
   }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-PAGINATION
+\*------------------------------------*/
+
+/*
+ * Simple pagination option
+ * 
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 1em;
+} 
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  @include column(.5);
+  display: block;
+  border-bottom: 1px solid $gray-lighter;
+  border-top: 1px solid $gray-lighter;
+  padding: 1.5em;
+  @include transition(background .2s);
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  background-color: $color-1;
+  color: $color-white;
 }

@@ -18,7 +18,8 @@
  * List             - List styles 
  * Blockquotes      - Blockquotes styles 
  * Address          - Address element styles
- * Table          - Table element styles
+ * Table            - Table element styles
+ * Code            - Code styles
  * 
  */
 
@@ -212,6 +213,19 @@ dd {
 
 
 
+/* Horizontal line */
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+
+
 /*------------------------------------*\
     #TYPOGRAPHY-BLOCKQUOTES
 \*------------------------------------*/
@@ -220,7 +234,7 @@ blockquote {
   padding: ($line-height-computed / 2) $line-height-computed;
   margin: 0 0 $line-height-computed;
   font-size: $blockquote-font-size;
-  background-color: $gray-lighter;
+  background-color: $blockquote-background-color;
   border-left: 2px solid $blockquote-border-color;
   p,
   ul,
@@ -252,6 +266,7 @@ address {
 /*------------------------------------*\
     #TYPOGRAPHY-TABLE
 \*------------------------------------*/
+
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -260,10 +275,80 @@ table {
 }
 td,
 th {
-  padding: .25rem .5rem;
+  padding: 1em;
   border: 1px solid #e5e5e5;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #TYPOGRAPHY-CODE
+\*------------------------------------*/
+
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  line-height: 1.4;
+  font-size: 15px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
 }
