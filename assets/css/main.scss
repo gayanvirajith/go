@@ -178,13 +178,13 @@ a:hover {
 .container {
 	width: 90%;
 	max-width: $M; // see breakpoints in _sass/partials/_layout.scss
-    margin: 0 auto;
+  margin: 0 auto;
 
-    &::after { /* Clearfix */
-        content: '';
-        display: table;
-        clear: both;
-    }
+  &::after { /* Clearfix */
+      content: '';
+      display: table;
+      clear: both;
+  }
 }
 
 
@@ -209,6 +209,15 @@ a:hover {
   @include MQ(M){
     display: table;
     height: 50px;
+  }
+  /* 
+   * Special media query hack for small tablet screen.
+   * Due to overlap of menu toggle and the logo.
+   */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 75%;
+    }
   }
 }
 
@@ -353,8 +362,6 @@ a:hover {
   box-shadow: 0 0 10px rgba(#000, .4);
   cursor: pointer;
   @extend .wc-img-replace;
-
-
   span {
       /* the span element is used to create the menu icon */
       position: absolute;
@@ -426,7 +433,7 @@ a:hover {
 @include MQ(M) {
   .sidebar-toggle {
     position: fixed;
-    top:  1rem;
+    top:  1.5rem;
   }
   .sidebar-toggle:before {
     padding-bottom: .15rem;
