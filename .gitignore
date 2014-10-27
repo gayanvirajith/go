@@ -5,5 +5,4 @@ _site/
 .sass-cache/
 *~
 Gemfile.lock
-Rakefile
 node_modules/
