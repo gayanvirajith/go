@@ -32,8 +32,8 @@ go:
     pinterest: 
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: UA-xxxx-x
-  google_webmaster_key: xxxxxxxx
+  google_analytics_key:
+  google_webmaster_key:
 
 # Conversion / Build settings 
 markdown:    kramdown
