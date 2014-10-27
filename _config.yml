@@ -22,7 +22,7 @@ go:
     email: gayanvirajith@gmail.com
     url: http://gayan.me
 
-    # Profile links, leave blank to ignore
+  # Profile links, leave blank to ignore
   social: 
     github: gayanvirajith
     twitter: gayanvirajith
@@ -30,6 +30,10 @@ go:
     gplus: +GayanVirajith
     dribble: gayan
     pinterest: 
+
+  # Google Analytics/Webmaster key, leave blank to ignore
+  google_analytics_key: UA-xxxx-x
+  google_webmaster_key: xxxxxxxx
 
 # Conversion / Build settings 
 markdown:    kramdown

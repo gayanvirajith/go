@@ -27,6 +27,16 @@
   <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/mstile-144x144.png">
   <meta name="msapplication-config" content="{{ site.baseurl }}/assets/browserconfig.xml" />
 
+  {% comment %}
+    The meta tag below is useful when you want to verify the website to 
+    Google web-master tools. Simply configure your site verification key on
+    _config.yml given by Google web-master tools.
+  {% endcomment %}
+
+  {% if site.go.google_webmaster_key %}
+  <meta name="google-site-verification" content="{{ site.go.google_webmaster_key }}" />
+  {% endif %}
+  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
