@@ -9,3 +9,11 @@ desc 'Search site and print specific deprecation warnings'
 task :check do 
     sh "jekyll doctor"
 end
+
+desc 'Git merge master branch changes to gh-pages;'
+task :gh do
+	git checkout gh-pages;
+	git merge master;
+	git push origin gh-pages;
+	git checkout master;
+end
