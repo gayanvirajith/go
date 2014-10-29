@@ -12,6 +12,10 @@ I am working for [template-factory.nl][tf] also known as [Mearch ICT][m].
 Prefer to serve with Php and Ruby based stacks and also love to work 
 on [Jekyll][jekyll] and [Processwire CMS/CMF][pw].
 
+This is my second jekyll theme released for [Jekyll communitiy][jekyll].
+
+Thanks
+
 ### Contact me
 
 Find me on [Google+][google] / [Twitter][Twitter] / [Github][github] or just say `Hello` at 

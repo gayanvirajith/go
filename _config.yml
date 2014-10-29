@@ -9,8 +9,8 @@ url: http://gayan.me # the base hostname & protocol for your site
 
 # Go theme based configuration. Please change accordingly.
 go:
-  title: Site title
-  tag_line: Your blog tag line
+  title: Go jekyll theme
+  tag_line: It is free and responsive
   meta_description: > # this means to ignore newlines until "author:"
    Write an awesome description for your new site here. You can edit this
    line in _config.yml. It will appear in your document head meta (for
