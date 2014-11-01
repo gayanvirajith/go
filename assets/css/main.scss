@@ -265,8 +265,8 @@ a:hover {
 /*
  * Sidebar
  *
- * The sidebar is the drawer, the item we are toggling with our handy hamburger
- * button in the corner of the page.
+ * The off-canvas sidebar, will be triggered by toggle button which will 
+ * rendered on the top left corner. 
  *
  * This particular sidebar implementation was inspired by Chris Coyier's
  * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
@@ -447,15 +447,8 @@ a:hover {
 /* 
  * Slide effect
  *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
- * from the default styles.
+ * Handle the sliding effects of the sidebar
  *
- * As an a heads up, we don't use `transform: translate3d()` here because when
- * mixed with `position: fixed;` for the sidebar toggle, it creates a new
- * containing block. Put simply, the fixed sidebar toggle behaves like
- * `position: absolute;` when transformed.
- *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
  
 .wrap,
@@ -576,4 +569,38 @@ a:hover {
 a.pagination-item:hover {
   background-color: $color-1;
   color: $color-white;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS-CODE-SNIPPET
+\*------------------------------------*/
+
+/*
+ * When we are using jekyll highlight, quotes (``), gist includes, 
+ * Following style will be applied.
+ *
+ */
+
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code {  
+  padding: .25em .5em;
+  font-size: 85%;
+  color: $color-1;
+  background-color: lighten($color-1, 68);
+}
+
+pre {
+  @include font-size(12px);
+  background-color: $color-white;
+  border: 1px solid $syntax-higlight-border-color;
+  @include MQ(M) {
+    @include font-size(14px);
+  }
 }
