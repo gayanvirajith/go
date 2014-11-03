@@ -268,11 +268,19 @@ address {
 \*------------------------------------*/
 
 table {
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 1px solid #e5e5e5;
   border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+  overflow-x: auto;
+  display: block;
+  @include MQ(M) {
+    display: table;
+    width: 100%;
+  }
+
 }
+
 td,
 th {
   padding: 1em;
