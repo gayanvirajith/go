@@ -102,6 +102,24 @@
           checkbox.checked = false;
         }, false);
       })(document);
+
+
+      ieSupport.ltIE9 = (function(){
+        var htmlElemClasses = document.querySelector('html').className.split(' ');
+        if ( !htmlElemClasses ){return false;}
+        for ( var i = 0; i < htmlElemClasses.length; i += 1 ){
+          var className = htmlElemClasses[i];
+          if ( className === 'lt-ie9' ){
+            return true;
+          }
+        }
+        return false;
+      }());
+
+      if (ieSupport){
+        // Do something about browser 
+      }
+
     </script>
     
     <!-- Google analytics  -->
