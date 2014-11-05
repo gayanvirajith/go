@@ -17,8 +17,7 @@ go:
   meta_description: > # this means to ignore newlines until "author:" property
    Go jekyll theme is a free responsive jekyll theme by Gayan Virajith
    and Maheshika Lakmali. Sourced on GitHub - 
-   https://github.com/gayanvirajith/go
-    
+   https://github.com/gayanvirajith/go    
   # Author details
   author: 
     name: Gayan Virajith
