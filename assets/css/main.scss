@@ -390,21 +390,22 @@ a:hover {
           height: 100%;
 
           -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+                  backface-visibility: hidden;
 
           -webkit-transition: -webkit-transform .2s, background 0s;
           -moz-transition: -moz-transform .2s, background 0s;
           transition: transform .2s, background 0s;
+
       }
 
       &::before {
           top: -6px;
-          transform: rotate(0);
+          @include transform(rotate(0));
       }
 
       &::after {
           bottom: -6px;
-          transform: rotate(0);
+          @include transform(rotate(0));
       }
   }
 }
@@ -424,12 +425,12 @@ a:hover {
     &::before {
         top: -4px;
         width: 10px;
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
     }
     &::after {
         top: 4px;
         width: 10px;
-        transform: rotate(45deg);
+        @include transform(rotate(45deg));
     }        
   }
 }
@@ -464,7 +465,11 @@ a:hover {
 }
 .wrap,
 .sidebar-toggle {
-  @include transition(transform .5s ease-in-out)
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  -moz-transition: -moz-transform .5s ease-in-out;
+  -ms-transition: -ms-transform .5s ease-in-out;
+  -o-transition: -o-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
  
 #sidebar-checkbox:checked + .sidebar {
@@ -474,9 +479,7 @@ a:hover {
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(14rem);
-      -ms-transform: translateX(14rem);
-          transform: translateX(14rem);
+  @include transform(translateX(14rem))
 }
 
 
