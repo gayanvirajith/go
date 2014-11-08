@@ -5,8 +5,6 @@ date:   2014-10-25 09:23:55
 categories: jekyll
 ---
 
-## What is Jekyll
-
 [Jekyll][jekyll] is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. Here is a little quote from the official website:
 
 > It takes a template directory containing raw text files in various formats, runs it through [Markdown][markdown] (or [Textile][textile]) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind [GitHub Pages][github-pages], which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for **free**.
