@@ -11,8 +11,7 @@ layout: default
     </h1>
 
     <div class="post-meta">{{ post.date | date_to_string }}</div>
-
-    {{ post.content }}
+    {{ post.excerpt }}
   </article>
   {% endfor %}
 </div>
