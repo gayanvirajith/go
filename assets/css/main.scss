@@ -287,14 +287,14 @@ a:hover {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-size: 18px;
+  @include font-size(15px);
   color: $color-white;
   background-color: lighten($color-1, 5%);
   -webkit-transition: all .5s ease-in-out;
           transition: all .5s ease-in-out;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   @include MQ(M) {
-    font-size: 20px;
+    @include font-size(15px);
   }
 }
 
@@ -307,9 +307,12 @@ a:hover {
 
 .sidebar .sidebar-info {
   padding: 1rem;
+
 }
 
-.sidebar .sidebar-info.small p { font-size: 14px; }
+.sidebar .sidebar-info p { @include font-size(16px); }
+
+.sidebar .sidebar-info.small p { @include font-size(14px); }
 
 .sidebar .sidebar-info p:last-child {
   margin-bottom: 0;
@@ -502,7 +505,7 @@ a:hover {
 /* Article title / Page title */
 .post-title a {
   color: $color-1;
-  border-bottom-width: 3px;
+  border-bottom-width: 2px;
 }
 
 /* Meta info after post-title */
