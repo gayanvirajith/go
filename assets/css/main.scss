@@ -392,9 +392,9 @@ a:hover {
           -webkit-backface-visibility: hidden;
                   backface-visibility: hidden;
 
-          -webkit-transition: -webkit-transform .2s, background 0s;
-          -moz-transition: -moz-transform .2s, background 0s;
-          transition: transform .2s, background 0s;
+          -webkit-transition: -webkit-transform .2s, background 0s, width 0s, top 0s;
+             -moz-transition: -moz-transform .2s, background 0s, width 0s, top 0s;
+                  transition: transform .2s, background 0s, width 0s, top 0s;
 
       }
 
