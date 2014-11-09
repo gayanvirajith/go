@@ -236,6 +236,7 @@ blockquote {
   font-size: $blockquote-font-size;
   background-color: $blockquote-background-color;
   border-left: 2px solid $blockquote-border-color;
+  @include border-radius(0 .3em .3em 0);
   p,
   ul,
   ol {
