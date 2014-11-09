@@ -48,8 +48,10 @@ title: Your browser is not supported
           <p>
             We are sorry but the website does not support Internet 
             Explorer 6, 7 and 8. 
-            To get the best experience on <strong>{{ site.url }}</strong> we 
-            recommend using latest version of
+            To get the best experience on 
+            <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}">
+              <strong>{{ site.url }}</strong>
+            </a> we recommend using latest version of
           </p>
           <p>
             <a href="https://www.google.com/chrome">Chrome</a>,
