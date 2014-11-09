@@ -575,10 +575,6 @@ a:hover {
   @include transition(background .2s);
 }
 
-.pagination-item.older {
-
-}
-
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
   background-color: $color-1;
