@@ -102,6 +102,9 @@
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  //change the default tap highlight color, when you tap on mobile device
+  -webkit-tap-highlight-color: transparent;
 }
 
 *, *:after, *:before {
@@ -570,6 +573,10 @@ a:hover {
   border-top: 1px solid $gray-lighter;
   padding: 1.5em;
   @include transition(background .2s);
+}
+
+.pagination-item.older {
+
 }
 
 /* Only provide a hover state for linked pagination items */
